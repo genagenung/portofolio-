@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radinka Priyatama | Digital Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f8fafc;
+        }
+        
+        /* Animasi Gradient Bergerak */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #06b6d4, #8b5cf6, #3b82f6, #22d3ee);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Animation */
+        .float {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .glass-bright {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #0891b2, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-futuristic {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-futuristic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(8, 145, 178, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-800 overflow-x-hidden">
+
+    <!-- Decorative background blobs -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-100/50 blur-[100px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-100/50 blur-[100px]"></div>
+    </div>
+
+    <!-- Navigasi -->
+    <header class="fixed w-full z-50 px-6 py-4">
+        <nav class="max-w-6xl mx-auto glass-bright rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">
+                <span class="text-slate-900">RADINKA</span><span class="text-cyan-600">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-600">
+                <a href="#home" class="hover:text-cyan-600 transition">Beranda</a>
+                <a href="#about" class="hover:text-cyan-600 transition">Profil</a>
+                <a href="#skills" class="hover:text-cyan-600 transition">Skill</a>
+                <a href="#achievements" class="hover:text-cyan-600 transition">Prestasi</a>
+            </div>
+            <a href="#contact" class="hidden md:block px-5 py-2 animated-gradient text-white text-xs font-bold rounded-xl btn-futuristic">
+                HUBUNGI SAYA
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-24">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block px-4 py-1 rounded-full bg-cyan-100 text-cyan-700 text-xs font-bold tracking-widest uppercase">
+                    Available for Projects
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] text-slate-900">
+                    Kreativitas <br> <span class="text-gradient">Tanpa Batas.</span>
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
+                    Saya <span class="font-bold text-slate-900">Radinka Priyatama Rukandi</span>. Seorang Video Editor dan individu yang berdedikasi tinggi dalam menciptakan visual yang memukau dan terstruktur.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#achievements" class="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold btn-futuristic">
+                        Lihat Portofolio
+                    </a>
+                    <div class="flex items-center space-x-3 px-4">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[10px] text-white">Pr</div>
+                            <div class="w-8 h-8 rounded-full bg-orange-500 border-2 border-white flex items-center justify-center text-[10px] text-white">Dr</div>
+                        </div>
+                        <span class="text-sm font-medium text-slate-500 underline">Editor Berkelas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center items-center">
+                <!-- Decorative Elements -->
+                <div class="absolute w-full h-full animated-gradient opacity-20 blur-[80px] rounded-full scale-75"></div>
+                <div class="relative z-10 float">
+                    <img src="https://raw.githubusercontent.com/radinkapriyatamarukadi/photo/main/Potret%20dramatis%20sang%20Kaisar%20Hirohito.png" 
+                         alt="Radinka Profile" 
+                         onerror="this.src='https://via.placeholder.com/500x600/0891b2/FFFFFF?text=Radinka+P'"
+                         class="w-[300px] md:w-[400px] rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-[12px] border-white">
+                    
+                    <!-- Achievement Badge Floating -->
+                    <div class="absolute -bottom-6 -right-6 glass-bright p-5 rounded-3xl shadow-xl flex items-center space-x-4 border border-white/50">
+                        <div class="w-12 h-12 rounded-2xl bg-yellow-400 flex items-center justify-center text-white text-xl shadow-lg shadow-yellow-200">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Terinovatif</p>
+                            <p class="text-sm font-extrabold text-slate-800">Sainspreneur 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto glass-bright p-10 md:p-16 rounded-[40px] relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-5 text-8xl font-black">ABOUT</div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-extrabold mb-8 flex items-center">
+                        <span class="w-10 h-1 bg-cyan-500 mr-4 rounded-full"></span>
+                        Profil Profesional
+                    </h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-10">
+                        "Saya terbiasa bekerja secara <span class="text-slate-900 font-bold">terstruktur</span>, mampu beradaptasi dengan cepat, serta memiliki komitmen untuk memberikan hasil terbaik dalam setiap pekerjaan."
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs mb-6">Pendidikan Terakhir</h4>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 text-slate-600">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900">SMAN 1 Subang</h5>
+                                        <p class="text-sm text-slate-500">Pendidikan Menengah Atas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 text-slate-600">
+                                        <i class="fas fa-school"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900">SMPIT Alamy</h5>
+                                        <p class="text-sm text-slate-500">Pendidikan Menengah Pertama</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs mb-6">Kekuatan Personal</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-medium">Critical Thinking</span>
+                                <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-medium">Social Interaction</span>
+                                <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-medium">Leader</span>
+                                <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-medium">Idea Generator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Senjata <span class="text-gradient">Kreatif.</span></h2>
+            <p class="text-slate-500 mb-16 max-w-2xl mx-auto">Kombinasi antara teknis visual dan kemampuan strategis untuk menghasilkan karya yang berkualitas tinggi.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <!-- Skill Item -->
+                <div class="group">
+                    <div class="w-20 h-20 mx-auto mb-4 glass-bright rounded-[25px] flex items-center justify-center text-3xl text-slate-700 group-hover:animated-gradient group-hover:text-white transition-all duration-500">
+                        <i class="fab fa-adobe"></i>
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest">Premiere Pro</h5>
+                </div>
+                <div class="group">
+                    <div class="w-20 h-20 mx-auto mb-4 glass-bright rounded-[25px] flex items-center justify-center text-3xl text-slate-700 group-hover:animated-gradient group-hover:text-white transition-all duration-500">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest">DaVinci Resolve</h5>
+                </div>
+                <div class="group">
+                    <div class="w-20 h-20 mx-auto mb-4 glass-bright rounded-[25px] flex items-center justify-center text-3xl text-slate-700 group-hover:animated-gradient group-hover:text-white transition-all duration-500">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest">HTML / CSS</h5>
+                </div>
+                <div class="group">
+                    <div class="w-20 h-20 mx-auto mb-4 glass-bright rounded-[25px] flex items-center justify-center text-3xl text-slate-700 group-hover:animated-gradient group-hover:text-white transition-all duration-500">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest">Graphic Design</h5>
+                </div>
+                <div class="group">
+                    <div class="w-20 h-20 mx-auto mb-4 glass-bright rounded-[25px] flex items-center justify-center text-3xl text-slate-700 group-hover:animated-gradient group-hover:text-white transition-all duration-500">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h5 class="font-bold text-sm uppercase tracking-widest">Dota 2 Strategist</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="py-24 bg-slate-900 text-white rounded-[60px] mx-4 my-10 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-[100px]"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Milestones & <span class="text-cyan-400">Awards</span></h2>
+                    <p class="text-slate-400 max-w-md text-lg">Bukti dedikasi dan profesionalisme dalam setiap tugas yang dipercayakan.</p>
+                </div>
+                <div class="text-sm font-bold tracking-[0.3em] uppercase text-cyan-500">Collection 2022-2025</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Highlight Card -->
+                <div class="md:col-span-2 group">
+                    <div class="relative h-[400px] rounded-[40px] overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/radinkapriyatamarukadi/photo2/main/IMG-20260207-WA0004.jpg" 
+                             alt="Sainspreneur Kabupaten" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-10">
+                            <span class="px-4 py-1 bg-cyan-500 text-white text-[10px] font-bold rounded-full uppercase tracking-widest">Win of the Year</span>
+                            <h3 class="text-3xl font-extrabold mt-4">Juara Terinovatif Sainspreneur</h3>
+                            <p class="text-slate-300 mt-2">Tingkat Kabupaten Subang - 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white/5 p-8 rounded-[40px] border border-white/10 hover:bg-white/10 transition">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 mb-6 text-xl">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">Juara 1 Cipta Puisi</h4>
+                        <p class="text-slate-400 text-sm mt-2">SMPIT Alamy - 2022</p>
+                    </div>
+                    <div class="bg-white/5 p-8 rounded-[40px] border border-white/10 hover:bg-white/10 transition">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 mb-6 text-xl">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">Juara 2 Cerdas Cermat</h4>
+                        <p class="text-slate-400 text-sm mt-2">SMPIT Alamy - 2023</p>
+                    </div>
+                    <div class="bg-cyan-500/20 p-8 rounded-[40px] border border-cyan-500/30">
+                        <h4 class="text-xl font-bold text-cyan-400">CTM GMM UPI 2025</h4>
+                        <p class="text-slate-300 text-sm mt-2">Peserta Kompetisi Matematika Nasional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-6">Hubungi <span class="text-gradient">Saya.</span></h2>
+                    <p class="text-slate-500 text-lg mb-10">Punya ide proyek atau ingin berdiskusi? Mari jalin komunikasi profesional melalui platform berikut.</p>
+                    
+                    <div class="space-y-6">
+                        <a href="https://wa.me/087779905072" class="flex items-center space-x-6 p-4 rounded-3xl hover:bg-white hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl text-green-600 group-hover:bg-green-600 group-hover:text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">WhatsApp</p>
+                                <p class="font-bold text-slate-900">0877-7990-5072</p>
+                            </div>
+                        </a>
+                        <a href="mailto:radinkapriyatama@gmail.com" class="flex items-center space-x-6 p-4 rounded-3xl hover:bg-white hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Email</p>
+                                <p class="font-bold text-slate-900">radinkapriyatama@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/prydtkaa_" class="flex items-center space-x-6 p-4 rounded-3xl hover:bg-white hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-2xl text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Instagram</p>
+                                <p class="font-bold text-slate-900">@prydtkaa_</p>
+                            </div>
+                        </a>
+                    </div>
+                </d
